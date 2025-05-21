@@ -1,0 +1,632 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
+
+.inner-main-content-part-4{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 95vh;
+    background: #eda2f9; 
+    background: linear-gradient(211deg, rgba(255,198,254,1) 0%, rgba(251,255,166,1) 49%, rgba(255,198,254,1) 100%);  
+    background-image: url('src/assets/backgound/mission-vision-bg.jpg');  
+    background-size: cover;  
+    background-position: center; 
+    z-index: -1;
+    width:100%; 
+    margin-top: 110px;
+    transition: 0.5s ease-in-out;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 60%;
+    outline-width: 8px;
+    outline-color: rgba(87, 86, 85, 0.411);
+    outline-style: solid;
+    outline-offset: 10px;
+    box-shadow: 0 4px 30px rgb(230, 230, 230);
+}
+
+
+.card {
+    width: 1100px;
+    height: 650px;
+    margin: 1rem auto;
+    perspective: 1000px;
+    cursor: pointer; 
+    margin-top: -740px;
+    z-index: 500;
+    position: relative;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 60%;
+    transition: 0.9s;
+    box-shadow: 0 4px 30px rgb(230, 230, 230);
+    filter: blur(3px) sepia(100%);
+    filter: drop-shadow(0 0 6rem rgb(255, 255, 255));
+
+
+    outline-width: 6px;
+    outline-color: rgba(255, 255, 255, 0.13);
+    outline-style: double;
+    outline-offset: 10px;
+    
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-front,
+  .card-back {
+    position: relative;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 60%;
+    flex-direction: column;
+  }
+
+  .card-front{
+    margin-top: -360px;
+   
+  }
+  .card-back{
+    margin-top: 460px;
+   
+  }
+  
+
+  .mission-heading-box{
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   margin-left: -40px; 
+   margin-top: -100px;
+   z-index: 1000;
+    width: 100%
+}
+.mission-heading-box h1{
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    padding: 10px;
+    filter:drop-shadow(10px 10px 15px rgba(112, 112, 112, 0.637));
+    letter-spacing: 8px;
+    font-family: "Luckiest Guy", cursive;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounce 1s infinite;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+.mission-heading-box h1 img{
+    width: 250px;
+    height: 160px;
+    filter: contrast(30%), brightness(0.5), saturate(1000%);
+    filter: drop-shadow(0 0 0.75rem rgb(255, 255, 255));
+}
+
+  .mission-text-box{
+    color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 940px;
+    height: 320px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 34px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.178);
+    filter: blur(3px) sepia(100%);
+    filter: drop-shadow(0 0 6rem rgb(68, 31, 31));
+    border-top-left-radius:10px;
+    box-shadow: 0 4px 30px rgb(230, 230, 230);
+    transition: 0.9s;
+    overflow: hidden;
+    position: relative;
+    margin-top:30px;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    text-align: center;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+.inner-main-content-part-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background: #eda2f9;
+  background: linear-gradient(211deg, rgba(255, 198, 254, 1) 0%, rgba(251, 255, 166, 1) 49%, rgba(255, 198, 254, 1) 100%);
+  background-image: url('src/assets/backgound/mission-vision-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  width: 100%;
+  margin-top: 110px;
+  transition: 0.5s ease-in-out;
+  /* border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%; */
+  outline-width: 8px;
+  outline-color: rgba(87, 86, 85, 0.411);
+  outline-style: solid;
+  outline-offset: 10px;
+  box-shadow: 0 4px 30px rgb(230, 230, 230);
+}
+
+/* Card mission and vision */
+.card {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  min-height: 650px;
+  margin: 1rem auto;
+  perspective: 1000px;
+  cursor: pointer;
+  /* margin-top: -940px */
+  margin-top: -900px;
+  z-index: -1;
+  position: relative;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  transition: 0.9s;
+  /* box-shadow: 0 4px 30px rgb(230, 230, 230); */
+  filter: blur(3px) sepia(100%);
+  filter: drop-shadow(0 0 6rem rgb(255, 255, 255));
+  /* outline-width: 6px;
+  outline-color: rgba(255, 255, 255, 0.13);
+  outline-style: double;
+  outline-offset: 10px; */
+ 
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front,
+.card-back {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60%;
+  flex-direction: column;
+  padding: 20px;}
+
+.card-front {
+  margin-top: 0;
+  margin-left: -600px;
+}
+
+.card-back {
+  margin-top: 20px;
+  margin-left: 600px;
+}
+
+.mission-heading-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0;
+  margin-top: -50px;
+  z-index: 1000;
+  width: 100%;
+}
+
+.mission-heading-box h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  padding: 10px;
+  filter: drop-shadow(10px 10px 15px rgba(112, 112, 112, 0.637));
+  letter-spacing: 8px;
+  font-family: "Luckiest Guy", cursive;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 1s infinite;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.mission-text-box {
+  color: #ffffff;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 940px;
+  height: auto;
+  min-height: 200px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 500;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.178);
+  filter: blur(3px) sepia(100%);
+  filter: drop-shadow(0 0 6rem rgb(68, 31, 31));
+  border-top-left-radius: 10px;
+  box-shadow: 0 4px 30px rgb(230, 230, 230);
+  transition: 0.9s;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+  border-top-right-radius: 30%;
+  border-bottom-left-radius: 30%;
+  text-align: center;
+  padding: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.5;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .inner-main-content-part-4 {
+    min-height: 80vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    width: 95%;
+    min-height: 500px;
+    margin-top: -600px;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 40%;
+  }
+
+  .card-inner {
+    flex-direction: column;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 40%;
+  }
+
+  .card-front,
+  .card-back {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 40%;
+
+  }
+
+  .mission-heading-box {
+    margin-top: -20px;
+  }
+
+  .mission-heading-box h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: 5px;
+  }
+
+  .mission-text-box {
+    max-width: 100%;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+  }
+}
+
+
+@media (min-width: 2300px) and (max-width: 4800px) {
+  .inner-main-content-part-4 {
+    min-height: 100vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -1100px; 
+   }
+
+  .card-front {
+    margin-left: -1000px;
+  }
+  .card-back {
+    margin-top: -400px;
+    margin-left: 1400px;
+  }
+
+  .mission-heading-box h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: 8px;
+  }
+
+   .mission-text-box {
+    min-height: 200px;
+    font-size: clamp(0.875rem, 2vw, 2rem);
+    line-height: 1.4;
+    border-radius: 10px;
+    padding: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+}
+
+
+
+
+
+
+@media(min-width: 1800px) and (max-width: 2300px){
+  .inner-main-content-part-4 {
+    min-height: 100vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -880px;
+  }
+
+  .card-front {
+    margin-left: -600px;
+  }
+  .card-back {
+    margin-left: 600px;
+  }
+}
+
+
+
+
+
+@media (min-width: 1300px) and (max-width: 1800px){
+  .inner-main-content-part-4 {
+    min-height: 100vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -880px;
+  }
+
+  .card-front {
+    margin-left: -380px;
+  }
+  .card-back {
+    margin-left: 380px;
+  }
+}
+
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+  .inner-main-content-part-4 {
+    min-height: 120vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -850px;
+  }
+
+  .card-front {
+    margin-left: -140px;
+  }
+  .card-back {
+    margin-left: 140px;
+  }
+}
+
+
+
+@media (min-width: 799px) and (max-width: 1100px) {
+  .inner-main-content-part-4 {
+    min-height: 70vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -730px;
+  }
+
+  .card-front {
+    margin-left: -80px;
+  }
+  .card-back {
+    margin-left: 80px;
+  }
+  .mission-text-box{
+    font-size: clamp(1.0rem, 4vw, 0.1rem);
+  }
+}
+
+
+
+
+
+@media (min-width: 480px) and (max-width: 800px){
+  .inner-main-content-part-4 {
+    min-height: 100vh;
+    margin-top: 50px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 500px;
+    margin-top: -800px;
+  }
+
+  .card-front{
+    margin-left: 0px;
+  }
+  .card-back{
+    margin-left: 0px;
+  }
+  .mission-heading-box h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    letter-spacing: 5px;
+  }
+
+  .mission-text-box {
+    min-height: 180px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.4;
+    border-radius: 5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 400px) and (max-width: 480px) {
+  .inner-main-content-part-4 {
+    min-height: 80vh;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 400px;
+    margin-top: -650px;
+  }
+
+  .card-front{
+    margin-left: 0;
+  }
+  .card-back{
+    margin-left: 0;
+  }
+  .mission-heading-box h1 {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    letter-spacing: 3px;
+  }
+
+  .mission-text-box {
+    min-height: 180px;
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: clamp(0.70rem, 2vw, 0.875rem);
+    line-height: 1.4;
+  }
+}
+
+
+@media (min-width: 280px) and (max-width: 400px) {
+  .inner-main-content-part-4 {
+    min-height: 125vh;
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .card {
+    min-height: 400px;
+    margin-top: -1000px;
+  }
+
+  .card-front{
+    margin-left: 0;
+  }
+  .card-back{
+    margin-left: 0;
+  }
+  .mission-heading-box h1 {
+    font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    letter-spacing: 3px;
+  }
+  .mission-text-box{
+    border-radius: 5%;
+  }
+}

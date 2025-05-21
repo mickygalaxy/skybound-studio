@@ -1,0 +1,37 @@
+/* USP Card Animation */
+.usp-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .usp-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Hover Effect */
+  .icon-wrapper {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .usp-card:hover .icon-wrapper {
+    transform: rotate(12deg) scale(1.2);
+  }
+  
+  /* Background Hover Animation */
+  .usp-card .hover-bg {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Text Overlay on Hover */
+  .usp-card:hover .hover-bg {
+    opacity: 0.9;
+  }
+  
+  .our-usp{
+    margin-top: 80px;
+    border-top-left-radius: 40%;
+    border-top-right-radius: 40%;
+    background: linear-gradient(45deg, #000000, #30180f, #ff6347);
+  }

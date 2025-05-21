@@ -1,0 +1,492 @@
+.inner-main-content-part-3 {  
+    width: 100%;
+    height: 620px;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    background-color: rgba(54, 54, 54, 0.99);  
+    box-shadow: 0 4px 30px rgba(147, 147, 147, 0.226);  
+    background-size: cover;  
+    background-position: center;  
+    opacity: 100;  
+    transition: 0.9s;  
+    filter: drop-shadow(0 0 0.75rem seashell);  
+    position: relative; /* added to allow absolute positioning of video */  
+    margin-top: 20px;
+    transition: height 0.4s ease, transform 0.4s ease; /* Smooth transition */  
+    overflow: hidden; /* Hides the video when not in full screen */
+}  
+
+.inner-main-content-part-3.shrink {  
+    height: 75vh; /* New height on scroll */  
+    transform: translateY(-50px); /* Moves up the video */  
+    z-index: -1;
+}  
+
+
+
+.inner-main-content-part-3 video {  
+    position: absolute; /* makes video take full width and height */  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    transition: 0.9s;  
+    filter: drop-shadow(0 0 0.75rem seashell);  
+    box-shadow: 0 4px 30px rgba(147, 147, 147, 0.226);  
+    object-fit: cover; /* ensures the video covers the area without distortion */  
+    z-index: -1;
+}
+
+
+
+.inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading{
+font-size: 100px;
+text-transform: uppercase;
+font-weight: 900;
+letter-spacing: 10px;
+position:absolute;
+top:50%;
+left:50%;
+width: 100%;
+text-align: center;
+color: transparent;
+transform: translate(-50%,-240%);
+background-image: url('src/assets/backgound/about-background.jpg');  
+background-size: cover;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+transition: font-size 0.8s ease; /* Smooth transition for text size */ 
+}
+
+.inner-main-content-part-3.shrink .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading{  
+    font-size: 80px; /* Reduce font size on scroll */  
+    margin-top: -200px;
+    filter: drop-shadow(0 0 0.75rem rgb(55, 21, 54));
+    width: 50%;
+    
+}  
+
+.about-image{
+    width: 500px;
+    height: 450px;
+    margin-top: 20px;
+    z-index: 1000;
+    position: relative; 
+    margin-right: -624px;
+}
+
+.about-image:before, .about-image:after {
+	content: '';
+	position: absolute; 
+	background: #fff;
+	position: absolute; top: -15px; left: 10px;
+	
+	border-radius: 100px;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	-moz-transform: rotate(30deg);
+}
+.cloud:after {
+	top: -55px; left: auto; right: 15px;
+}
+.x1 {
+    animation: moveclouds 15s linear forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------- */
+.inner-main-content-part-3-About-Skybound-box-text-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s;
+    padding: 5px;
+    filter: drop-shadow(0 0 0.75rem seashell);
+    /* margin-left: -160px; */
+    gap: 264px;
+}
+
+.about-text-box{
+   color: #fbe5e5;
+   z-index: 1000;
+   display: block;
+   width: 960px;
+   height: 300px;
+   font-size: 32px;
+   font-weight: 500;
+   border-radius: 10px;
+   background: rgba(0, 0, 0, 0.178);
+   filter: blur(3px) sepia(100%);
+   filter: drop-shadow(0 0 6rem rgb(68, 31, 31));
+   border-top-left-radius:10px;
+   box-shadow: 0 4px 30px rgb(230, 230, 230);
+   transition: 0.9s;
+   overflow: hidden;
+   position: relative;
+   margin-top:250px;
+   /* margin-left: -320px; */
+   border-top-right-radius: 60px;
+   border-bottom-left-radius: 70px;
+   text-align: center;
+   padding: 20px;
+   margin-bottom: 150px;
+
+}
+.about-text-box{
+    font-size: 30px;
+    font-weight: 600;
+    /* margin-top: 20px;
+    margin-bottom: 20px; */
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 4px;
+    word-spacing: 2px;
+}
+@media(min-width:656px) and (max-width:1000px){
+    
+    .inner-main-content-part-3-About-Skybound-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px;
+    }
+.inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+    font-size: 70px;
+    transform: translate(-50%,-240%);
+    
+}
+.inner-main-content-part-3-About-Skybound-box-text-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 80px;
+    
+}
+.about-text-box{
+    font-size: 35px;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+}
+
+
+
+
+
+
+@media (min-width:840px) and (max-width:940px){
+    .about-text-box{
+        font-size: 32px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+}
+
+@media (min-width:760px) and (max-width:840px){
+
+
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 64px;
+        transform: translate(-50%,-245%);
+        
+    }
+
+    .about-text-box{
+        font-size: 30px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+}
+
+@media (min-width:720px) and (max-width:760px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 60px;
+        transform: translate(-50%,-245%);
+        
+    }
+
+    .about-text-box{
+        font-size: 28px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+}
+@media (min-width:694px) and (max-width:720px){
+.inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+    font-size: 58px;
+    transform: translate(-50%,-245%);
+    
+}
+
+.about-text-box{
+    font-size: 26px;
+    width: 100%;
+    height: 100%;
+    font-weight: 500;
+}
+}
+
+@media (min-width:665px) and (max-width:694px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 53px;
+        transform: translate(-50%,-250%);
+        
+    }
+    
+    .about-text-box{
+        font-size: 22px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+}
+}
+
+@media (min-width:401px) and (max-width:665px){
+    .inner-main-content-part-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inner-main-content-part-3-About-Skybound-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 55px;
+        transform: translate(-50%,-170%);
+        
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 60px;
+        
+    }
+    .about-text-box{
+        font-size: 20px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .about-image{
+        display: none;
+    }
+
+    @media (min-width:401px) and (max-width:425px){
+        .inner-main-content-part-3-About-Skybound-box-text-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 70px;
+        }
+        .about-text-box{
+            font-size: 15px;
+            width: 100%;
+            height: 100%;
+            font-weight: 500;
+        }
+        .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+            font-size: 50px;
+            
+        }
+    }
+}
+
+@media (min-width:150px) and (max-width:400px){
+    .inner-main-content-part-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inner-main-content-part-3-About-Skybound-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 40px;
+        transform: translate(-50%,-230%);
+        
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 100px;
+        
+    }
+    .about-text-box{
+        font-size: 18px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .about-image{
+        display: none;
+    }
+
+   @media (min-width:150px) and (max-width:340px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 35px;
+        transform: translate(-50%,-245%);
+
+    }
+    .about-text-box{
+        font-size: 16px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+   }
+
+   @media(min-width:270px) and (max-width:320px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 30px;
+        transform: translate(-50%,-245%);
+
+    }
+    .about-text-box{
+        font-size: 12px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+   }
+   @media(min-width:250px) and (max-width:270px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 28px;
+        transform: translate(-50%,-320%);
+
+    }
+    .about-text-box{
+        font-size: 14px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        margin-bottom: 130px;
+    }
+   }
+
+   @media(min-width:230px) and (max-width:250px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 25px;
+        transform: translate(-50%,-360%);
+
+    }
+    .about-text-box{
+        font-size: 12px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        margin-bottom: 140px;
+    }
+   }
+
+
+
+   @media(min-width:200px) and (max-width:230px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 22px;
+        transform: translate(-50%,-370%);
+
+    }
+    .about-text-box{
+        font-size: 10px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        margin-bottom: 140px;
+    }
+   }
+
+   @media(min-width:100px) and (max-width:200px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 18px;
+        transform: translate(-50%,-370%);
+
+    }
+    .about-text-box{
+        font-size: 8px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+    .inner-main-content-part-3-About-Skybound-box-text-image{
+        margin-bottom: 140px;
+    }
+   }
+
+}
+
+
+ @media (min-width:1000px) and (max-width:1120px){
+    .inner-main-content-part-3-About-Skybound-box .about-skybound .about-heading {
+        font-size: 64px;
+        transform: translate(-50%,-240%);
+        
+    }
+    .inner-main-content-part-3-About-Skybound-box{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .about-skybound{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about-text-box{
+        font-size: 32px;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+    }
+}

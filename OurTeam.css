@@ -1,0 +1,39 @@
+/* Hover Effect for Team Cards */
+.team-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Text Styling */
+  .team-card h3 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  .team-card p {
+    font-weight: 500;
+  }
+  .our-team{
+    margin-top: 80px;
+    border-radius: 10%;
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 60%;
+    transform: skewY(-2deg);
+  }
+
+  .all-card{
+    box-shadow: 0 4px 30px rgba(172, 172, 172, 0.747);
+    filter: blur(3px) sepia(100%);
+    filter: drop-shadow(0 0 6rem rgba(137, 137, 137, 0.245));
+  }
+
+    .team-card:hover {
+        box-shadow: 0 20px 25px rgba(252, 252, 252, 0.637);
+        filter: blur(3px) sepia(100%);
+        filter: drop-shadow(0 0 6rem rgba(249, 182, 182, 0.87));
+    }

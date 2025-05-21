@@ -1,0 +1,167 @@
+/* Social Icon Style */
+.social-icon {
+    @apply w-12 h-12 flex items-center justify-center rounded-full bg-gray-800 text-white hover:bg-green-500 hover:text-white transition-all duration-300;
+  }
+  
+  /* Footer Hover Effect */
+  footer a {
+    transition: color 0.3s ease-in-out;
+  }
+  
+  footer a:hover {
+    color: #4ade80; /* Green hover color */
+  }
+  
+  /* Footer Link Animation */
+  footer li {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  footer li:hover {
+    transform: translateX(5px);
+  }
+.footer-box{
+  /* border-top-left-radius: 20%;
+  border-top-right-radius: 10%; */
+  /* background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(54,0,50,1) 100%); */
+  background: linear-gradient(0deg, rgba(255,195,195,1) 0%, rgba(255,247,218,1) 100%);
+
+}  
+
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* Footer.css */
+.footer-box {
+  min-height: 300px; /* Ensure footer has a minimum height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a, #292929);
+  padding: 3rem 1.5rem; /* Default padding for mobile */
+}
+
+/* Container for footer content */
+.footer-box .max-w-6xl {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem; /* Space between grid items */
+}
+
+/* Typography */
+.footer-box h3 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer-box p,
+.footer-box ul li {
+  font-size: 0.875rem; /* 14px */
+  color: #9ca3af; /* Gray-600 equivalent */
+  line-height: 1.5;
+}
+
+/* Social Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #374151; /* Gray-700 */
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 1.25rem; /* Icon size */
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #10b981; /* Green-400 equivalent */
+  transform: translateY(-2px);
+}
+
+/* Hover effects for contact info */
+.footer-box ul li:hover {
+  color: #10b981; /* Green-400 */
+  cursor: pointer;
+}
+
+/* Divider */
+.footer-box .border-t {
+  border-top: 1px solid #374151; /* Gray-700 */
+  margin-top: 3rem;
+}
+
+/* Copyright */
+.footer-box .text-center p {
+  font-size: 0.75rem; /* 12px */
+  color: #6b7280; /* Gray-500 */
+}
+
+/* Responsive Design */
+
+/* Small screens (mobile) */
+@media (max-width: 640px) {
+  .footer-box {
+    padding: 2rem 1rem;
+  }
+
+  .footer-box .max-w-6xl {
+    grid-template-columns: 1fr; /* Single column */
+    text-align: center; /* Center align all content */
+  }
+
+  .footer-box h3 {
+    font-size: 1.25rem; /* 20px */
+  }
+
+  .footer-box .flex {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .footer-box {
+    padding: 3rem 2rem;
+  }
+
+  .footer-box .max-w-6xl {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+  }
+
+  /* Move the third section to span full width */
+  .footer-box .max-w-6xl > div:nth-child(3) {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+  .footer-box .flex {
+    justify-content: center; /* Center social icons */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .footer-box {
+    padding: 4rem 1.5rem;
+  }
+
+  .footer-box .max-w-6xl {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  }
+
+  .footer-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-box .text-center.lg\:text-right {
+    text-align: right; /* Right-align for large screens */
+  }
+
+  .footer-box .flex.lg\:justify-end {
+    justify-content: flex-end; /* Right-align social icons */
+  }
+}

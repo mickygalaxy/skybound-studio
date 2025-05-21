@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {  
+    margin: 0;  
+    padding: 0;  }
+body{
+   
+    /* background-color: rgb(255, 231, 231); */
+    background: radial-gradient(circle, rgba(236,174,238,0.907527977011117) 0%, rgba(251,251,251,1) 100%);
+    /* background: radial-gradient(circle, rgb(12, 12, 12) 0%, rgb(12, 31, 21) 100%); */
+      
+    /* background-image: url('src/assets/backgound/3.jpg');  
+    background-size: cover;  
+    background-position: center; */
+    z-index: -1;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    position: relative; /* Position relative to allow absolute positioning of child elements */
+}
+
+html, body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    overflow-y: scroll; /* Ensures scrolling still works */
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none;
+}

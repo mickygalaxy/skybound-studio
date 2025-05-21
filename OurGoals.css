@@ -1,0 +1,35 @@
+/* Goal Card Animation */
+.goal-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .goal-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Hover Effect */
+  .icon-wrapper {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .goal-card:hover .icon-wrapper {
+    transform: rotate(12deg) scale(1.2);
+  }
+  
+  /* Background Hover Animation */
+  .goal-card .hover-bg {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Text Overlay on Hover */
+  .goal-card:hover .hover-bg {
+    opacity: 0.9;
+  }
+.our-goals{
+    margin-top:1px;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+}  

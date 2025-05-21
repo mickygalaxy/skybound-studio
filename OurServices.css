@@ -1,0 +1,32 @@
+/* Card Animation */
+.service-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Bounce on Hover */
+  .icon-wrapper {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .service-card:hover .icon-wrapper {
+    transform: rotate(15deg) scale(1.2);
+  }
+  
+  /* Hover Animation Background */
+  .service-card .hover-bg {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+.over-services{
+    margin-top: 80px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}

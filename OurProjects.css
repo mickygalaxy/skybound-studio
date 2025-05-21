@@ -1,0 +1,45 @@
+/* Project Card Animation */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    background-color: azure;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Hover Zoom */
+  .project-card img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Overlay Fade Effect */
+  .project-card .overlay {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .project-card:hover .overlay {
+    opacity: 1;
+  }
+.our-projet{
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.our-projects-container{
+  padding: 30px;
+  background-color: rgba(236, 172, 255, 0.192);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
