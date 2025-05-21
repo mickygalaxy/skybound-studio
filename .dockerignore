@@ -1,0 +1,6 @@
+# Node modules and build directory
+node_modules
+dist
+.DS_Store
+.git
+.gitignore

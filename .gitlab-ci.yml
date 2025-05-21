@@ -1,0 +1,102 @@
+# stages:
+#   - build
+#   - docker
+
+# variables:
+#   IMAGE_NAME: $CI_REGISTRY_IMAGE/react-app
+#   DOCKER_REGISTRY: $CI_REGISTRY
+
+# cache:
+#   paths:
+#     - node_modules/
+
+# build_job:
+#   stage: build
+#   image: node:18
+#   script:
+#     - npm install
+#     - npm audit fix
+#     - npm run build
+#   artifacts:
+#     paths:
+#       - build/
+#     expire_in: 1 hour
+
+# kaniko_build_push:
+#   stage: docker
+#   image: gcr.io/kaniko-project/executor:debug
+#   script:
+#     - /busybox/sh -c 'echo "{\"auths\":{\"$DOCKER_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json && /kaniko/executor --context "${CI_PROJECT_DIR}" --dockerfile "${CI_PROJECT_DIR}/Dockerfile" --destination "${IMAGE_NAME}:latest"'
+#   only:
+#     - main
+#     - master
+
+
+
+stages:
+  - build
+  - docker
+  - run
+
+variables:
+  # Use GitLab Container Registry
+  IMAGE_NAME: micky27/skybound-studio
+  DOCKER_REGISTRY: https://index.docker.io/v1/
+  DOCKER_TAG: latest # Set the Docker image tag
+
+cache:
+  paths:
+    - node_modules/
+
+build_job:
+  stage: build
+  image: node:18
+  script:
+    - npm install
+    - npm audit fix || true # Ensures the pipeline doesn't fail if no vulnerabilities can be fixed automatically
+    - npm run build
+    - echo "Contents of current directory:"
+    - ls -l # Check all files and folders
+    - echo "Contents of build/ or dist/:"
+    - ls build/ || ls dist/ || echo "Output directory not found"
+  artifacts:
+    paths:
+      - dist/ # Ensure this matches your build output folder
+    expire_in: 5 hours
+
+docker_build_push:
+  stage: docker
+  image:
+    name: gcr.io/kaniko-project/executor:debug-v1.0.0 #   Kaniko  image for building and pushing Docker images
+    entrypoint: [""]
+  script:
+    - echo '{"auths":{"'"$DOCKER_REGISTRY"'":{"username":"'"$DOCKER_USERNAME"'","password":"'"$DOCKER_ACCESS_TOKEN"'"}}}' > /kaniko/.docker/config.json
+    - echo "hello, its working or not"
+    - ls "$CI_PROJECT_DIR"
+    # - ls "$CI_PROJECT_DIR/build" # Debugging build artifacts
+    - ls "$CI_PROJECT_DIR/dist" # Adjust if your build outputs to 'dist'
+    - echo $CI_PROJECT_DIR
+    - cat /kaniko/.docker/config.json
+    - /kaniko/executor
+           --context "$CI_PROJECT_DIR"
+           --dockerfile "$CI_PROJECT_DIR/Dockerfile.dev"
+           --destination "$IMAGE_NAME:$DOCKER_TAG"
+           --force
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"
+
+run_container:
+  stage: run
+  image: docker:20.10 # Ensure Docker is available in this stage
+  services:
+    - docker:dind
+    - command:"--host=tcp://0.0.0.0:2375", "--host=unix:///var/run/docker.sock"]
+
+  script:
+    - docker pull "$IMAGE_NAME:$DOCKER_TAG"
+    - docker run -d -p 3001:3001 --name skybound-container "$IMAGE_NAME:$DOCKER_TAG"
+    - docker ps # Verify the container is running
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" # Optional: Run on merge requests
+    - if: $CI_PIPELINE_SOURCE == "push" # Optional: Run on pushes to branches

@@ -1,0 +1,10 @@
+All Docker Commands 
+-------------------
+
+1) "docker ps" [to list all running containers or process status]
+
+2)  "docker ps -a" []
+
+3) "docker images" []
+
+4) 
